@@ -1,24 +1,24 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
-
-//pages and componets
+// pages & components
 import Home from './pages/Home'
-import Navbar from './componets/Navbar';
-
+import Navbar from './componets/Navbar'
 
 function App() {
+
   return (
     <div className="App">
-     <BrowserRouter>
-        <Navbar>
-          <div className='pages'>
-              <Routes>
-                <Route path='/' element={<Home />} />
-              </Routes>
-            </div>
-        </Navbar>
-         <Home/>
-     </BrowserRouter>
+      <BrowserRouter>
+        <Navbar />
+        <div className="pages">
+          <Routes>
+            <Route 
+              path="/" 
+              element={<Home />} 
+            />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
